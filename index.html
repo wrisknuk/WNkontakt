@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>WNконтакт</title>
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/auth.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/dialogs.css">
+<link rel="stylesheet" href="css/chat.css">
+<link rel="stylesheet" href="css/modals.css">
+<link rel="stylesheet" href="css/splash.css">
+<link rel="stylesheet" href="css/vista.css">
+<link rel="stylesheet" href="css/settings.css">
+<link rel="stylesheet" href="css/wall.css">
+<link rel="stylesheet" href="css/aero-alert.css">
+<link rel="icon" href="icons/vista.start.webp">
+</head>
+<body>
+
+<div id="splash">
+  <div class="chick"></div>
+  <div class="splash-title">Загрузка WNконтакта…</div>
+  <div id="splashMsg">Подключение к серверам Пик</div>
+</div>
+<noscript><p style="position:fixed;inset:0;z-index:200;background:#fff;padding:30px;font:16px sans-serif">Для работы WNконтакта необходим JavaScript.</p></noscript>
+<script src="js/boot-check.js"></script>
+
+<section id="auth" class="hidden">
+  <div class="auth-top"><span class="logo">WNконтакт</span></div>
+  <div class="auth-wrap">
+    <div class="auth-hero">
+      <div class="chick"></div>
+      <p class="bubble">Добро пожаловать в <b>WNконтакт</b>! Авторизуйтесь, чтобы оставаться на связи с друзьями.</p>
+    </div>
+    <div class="auth-box">
+      <div class="auth-tabs">
+        <button id="tabLogin" class="on" type="button">Вход</button>
+        <button id="tabReg" type="button">Регистрация</button>
+      </div>
+      <label class="row"><span>Короткое имя / ID (@)</span>
+        <div class="at-wrap"><b>@</b><input id="aUser" autocomplete="username" autocapitalize="none" spellcheck="false" maxlength="32"></div>
+      </label>
+      <label class="row regOnly hidden"><span>Ваше имя</span><input id="aName" autocomplete="name" maxlength="40"></label>
+      <label class="row"><span>Пароль</span><input id="aPass" type="password" autocomplete="current-password"></label>
+      <div class="err" id="aErr"></div>
+      <button class="btn" id="aGo" type="button">Войти</button>
+    </div>
+  </div>
+</section>
+
+<div id="app" class="hidden">
+  <header class="top">
+    <div class="top-in">
+      <span class="logo">WNконтакт</span>
+      <input id="search" class="top-search" placeholder="Поиск людей, групп…" autocomplete="off" autocapitalize="none" spellcheck="false">
+      <button id="meBtn" class="top-me" type="button" aria-label="Моя страница"></button>
+    </div>
+  </header>
+
+  <div class="page">
+    <nav class="nav">
+      <button id="navMessages" class="on" type="button">Сообщения</button>
+      <button id="navRecs" type="button">Новости</button>
+      <button id="navProfile" type="button">Моя страница</button>
+      <button id="navWall" type="button">Моя стена</button>
+      <button id="navChannel" type="button">Создать сообщество</button>
+      <button id="navGroup" type="button">Создать беседу</button>
+      <button id="navLogout" type="button">Выход</button>
+    </nav>
+
+    <section class="box dialogs">
+      <div class="box-head">Диалоги</div>
+      <div id="dialogs" class="dialogs-list"></div>
+    </section>
+
+    <section class="box chat" id="chat"></section>
+  </div>
+</div>
+
+<div id="profileModal" class="modal hidden">
+  <div class="pop">
+    <div class="pop-head">Редактирование профиля</div>
+    <div class="pop-body">
+      <div class="ava-pick">
+        <span id="pAvatar"></span>
+        <button class="link" id="pPick" type="button">Загрузить фотографию</button>
+        
