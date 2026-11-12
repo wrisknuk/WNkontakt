@@ -1,0 +1,20 @@
+/* Глобальный контейнер приложения */
+#app-layout {
+    display: grid;
+    grid-template-columns: 150px 1fr; /* Левое меню жестко 150px */
+    gap: 20px;
+    max-width: 960px;
+    margin: 57px auto 0 auto; /* Отступ сверху под шапку 42px + 15px зазор */
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+/* Общий контейнер для страниц (Сообщения, Стена, Настройки) */
+.page-container {
+    background-color: #ffffff;
+    border: 1px solid #dce1e6;
+    border-radius: 4px;
+    padding: 20px;
+    min-height: 450px;
+    box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8; /* Аккуратная тонкая тень ВК */
+}

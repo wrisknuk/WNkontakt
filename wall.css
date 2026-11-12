@@ -1,0 +1,68 @@
+.wall-post {
+    background: #ffffff;
+    border: 1px solid #dce1e6;
+    border-radius: 4px;
+    padding: 16px 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.post-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 12px;
+}
+
+.post-author {
+    font-weight: 600;
+    color: #2a5885;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.post-author:hover {
+    text-decoration: underline;
+}
+
+.post-date {
+    color: #939393;
+    font-size: 11px;
+    margin-top: 2px;
+}
+
+.post-content {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #000000;
+    word-break: break-word;
+}
+
+/* Панель лайков / шеров */
+.post-footer {
+    display: flex;
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top: 1px solid #f2f3f5;
+    gap: 15px;
+    color: #2a5885;
+    font-weight: 500;
+    font-size: 12.5px;
+}
+
+.post-action-btn {
+    cursor: pointer;
+    transition: opacity 0.15s ease;
+}
+
+.post-action-btn:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}

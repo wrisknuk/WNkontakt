@@ -1,0 +1,187 @@
+:root {
+    --paper: #2d6fb4;
+    --card: #fff;
+    --ink: #000;
+    --muted: #6d6d6d;
+    --edge: #7f9db9;
+    --shadow-c: rgba(0,0,0,.35);
+    --yellow: #3c7fb1;
+    --coral: #3c7fb1;
+    --mint: #e8f1fb;
+    --sky: #7eb4ea;
+    --soft: #f4f8fd;
+    --hover: #eaf3fc;
+    --active: #cfe3f8;
+    --input: #fff;
+    --link: #0066cc;
+    --danger: #c00;
+    --bar: #bcd3ee;
+    --name-l: 30%;
+    --dot: transparent;
+    --chick: url("../icons/vista.start.webp");
+}
+
+body {
+    font-size: 13px;
+    background: radial-gradient(ellipse 80% 55% at 25% 0,#78b9ee 0,transparent 70%),
+                radial-gradient(ellipse 70% 60% at 100% 100%,#1a5798 0,transparent 70%),
+                linear-gradient(#2d6fb4,#0f3b73) fixed;
+}
+
+#splash {
+    background: radial-gradient(ellipse 80% 55% at 25% 0,#78b9ee 0,transparent 70%),
+                linear-gradient(#2d6fb4,#0f3b73);
+}
+
+.splash-title {
+    color: #fff;
+    font-weight: 400;
+    text-shadow: 0 1px 4px #0a2a55;
+}
+
+#splashMsg {
+    color: #e3eefb;
+}
+
+.chick {
+    animation: none;
+    width: 72px;
+    height: 72px;
+}
+
+.top, .auth-top {
+    background: linear-gradient(#e9f1fb 0,#c9dcf3 48%,#aec9ea 52%,#bfd7f2 100%);
+    border-bottom: 1px solid #4d709c;
+    box-shadow: inset 0 -1px 0 rgba(255,255,255,.6), 0 2px 8px rgba(0,0,0,.35);
+}
+
+.logo {
+    color: #1e395b;
+    font-weight: 400;
+    font-size: 20px;
+    transform: none;
+    text-shadow: 0 0 8px #fff, 0 0 3px #fff;
+}
+
+.logo::before {
+    width: 32px;
+    height: 32px;
+}
+
+.top-search {
+    border: 1px solid #8e9fb7;
+    border-radius: 3px;
+    height: 24px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
+    background: #fff;
+}
+
+.top-search:focus {
+    border-color: #3c7fb1;
+    box-shadow: 0 0 4px #7eb4ea;
+}
+
+.top-me {
+    color: #1e395b;
+}
+
+.top-me:hover {
+    background: linear-gradient(#eaf6fd 0,#d9f0fc 50%,#bee6fd 50%,#a7d9f5 100%);
+    box-shadow: inset 0 0 0 1px #fff;
+    outline: 1px solid #7da2ce;
+}
+
+.box, .pop, .auth-box {
+    background: #fff;
+    border: 1px solid #2c4467;
+    border-radius: 7px;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.55), 0 5px 18px rgba(0,0,0,.5);
+}
+
+.box-head, .pop-head {
+    background: linear-gradient(#e9f1fb 0,#c9dcf3 48%,#aec9ea 52%,#bfd7f2 100%);
+    color: #1e395b;
+    font-weight: 400;
+    font-size: 13px;
+    text-shadow: 0 0 6px #fff;
+    border-bottom: 1px solid #6f93bf;
+    padding: 6px 12px;
+}
+
+.nav {
+    background: rgba(235,243,252,.82);
+    border: 1px solid #2c4467;
+    border-radius: 7px;
+    padding: 4px;
+    gap: 1px;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.6), 0 4px 14px rgba(0,0,0,.4);
+}
+
+.nav button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    font-weight: 400;
+    color: #1e395b;
+    transform: none !important;
+    box-shadow: none;
+}
+
+.nav button:hover {
+    background: linear-gradient(#fafbfd,#ebf3fd);
+    border-color: #b8d6fb;
+}
+
+.nav button.on {
+    background: linear-gradient(#e6f1fd,#c4ddf9);
+    border-color: #7da2ce;
+    color: #000;
+}
+
+.nav button::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    flex: none;
+    background: center/contain no-repeat;
+}
+
+#navMessages::before { background-image: url(../icons/vista.mail.webp); }
+#navProfile::before { background-image: url(../icons/vista.user.webp); }
+#navChannel::before { background-image: url(../icons/vista.news.webp); }
+#navGroup::before { background-image: url(../icons/vista.world.webp); }
+#navLogout::before { background-image: url(../icons/vista.power.webp); }
+
+.btn, .mini, .leave, .auth-tabs button {
+    border: 1px solid #707070;
+    border-radius: 3px;
+    background: linear-gradient(#f2f2f2 0,#ebebeb 50%,#dddddd 50%,#cfcfcf 100%);
+    color: #000;
+    font-weight: 400;
+    padding: 3px 14px;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.75);
+    transform: none !important;
+}
+
+.mini, .leave {
+    padding: 1px 9px;
+}
+
+.btn.light {
+    color: #000;
+}
+
+.btn:hover, .mini:hover, .leave:hover, .auth-tabs button:hover {
+    background: linear-gradient(#eaf6fd 0,#d9f0fc 50%,#bee6fd 50%,#a7d9f5 100%);
+    border-color: #3c7fb1;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.8);
+}
+
+.btn:active, .mini:active, .leave:active, .auth-tabs button.on {
+    background: linear-gradient(#c2e4f6,#98d1ef 50%,#6bbfe8 50%,#8fd3f5);
+    border-color: #2c628b;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.3);
+    color: #00
+    
